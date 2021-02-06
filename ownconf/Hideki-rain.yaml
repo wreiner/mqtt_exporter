@@ -1,0 +1,13 @@
+---
+metrics:
+  - name: "hideki_rain_rain_mm"
+    help: "Hideki-Rain Rain in mm"
+    type: "gauge"
+    topic: "rtl_433/piholebu/devices/Hideki-Rain/4/0/rain_mm"
+    label_configs:
+      - source_labels: ["__msg_topic__"]
+        separator: "/"
+        regex: "(.*)"
+        target_label: "__topic__"
+        replacement: '\1'
+        action: "replace"

@@ -1,0 +1,61 @@
+---
+metrics:
+  - name: "hideki_wind_tempereature_C"
+    help: "Hideki-Wind Temperature in C"
+    type: "gauge"
+    topic: "rtl_433/piholebu/devices/Hideki-Wind/4/15/temperature_C"
+    label_configs:
+      - source_labels: ["__msg_topic__"]
+        separator: "/"
+        regex: "(.*)"
+        target_label: "__topic__"
+        replacement: '\1'
+        action: "replace"
+
+  - name: "hideki_wind_wind_speed"
+    help: "Hideki-Wind speed in miles/hour"
+    type: "gauge"
+    topic: "rtl_433/piholebu/devices/Hideki-Wind/4/15/wind_avg_mi_h"
+    label_configs:
+      - source_labels: ["__msg_topic__"]
+        separator: "/"
+        regex: "(.*)"
+        target_label: "__topic__"
+        replacement: '\1'
+        action: "replace"
+
+  - name: "hideki_wind_gust_speed"
+    help: "Hideki-Wind gust speed in miles/hour"
+    type: "gauge"
+    topic: "rtl_433/piholebu/devices/Hideki-Wind/4/15/wind_max_mi_h"
+    label_configs:
+      - source_labels: ["__msg_topic__"]
+        separator: "/"
+        regex: "(.*)"
+        target_label: "__topic__"
+        replacement: '\1'
+        action: "replace"
+
+  - name: "hideki_wind_wind_direction"
+    help: "Hideki-Wind wind direction in degrees"
+    type: "gauge"
+    topic: "rtl_433/piholebu/devices/Hideki-Wind/4/15/wind_dir_deg"
+    label_configs:
+      - source_labels: ["__msg_topic__"]
+        separator: "/"
+        regex: "(.*)"
+        target_label: "__topic__"
+        replacement: '\1'
+        action: "replace"
+
+  - name: "hideki_wind_wind_approach"
+    help: "Hideki-Wind wind approach"
+    type: "gauge"
+    topic: "rtl_433/piholebu/devices/Hideki-Wind/4/15/wind_approach"
+    label_configs:
+      - source_labels: ["__msg_topic__"]
+        separator: "/"
+        regex: "(.*)"
+        target_label: "__topic__"
+        replacement: '\1'
+        action: "replace"
